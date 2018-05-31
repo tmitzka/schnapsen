@@ -37,21 +37,21 @@ def start_new_game(players):
 
 
 def game_loop(game, players):
-    """The game loop."""
+    """Run the game loop."""
     while True:
 
         # Start a new trick.
         trick = []
         for player in players:
 
-            # The players have played all their cards
-            # before one of them could achieve 66 points.
+            # Check whether the players have run out of cards.
             if not player.cards:
                 print("\nWe've run out of cards.")
                 print("The player who took the last trick wins.")
                 return
 
-            # Players may exchange the trump Jack or close the stock."""
+            # The first player may exchange the trump Jack
+            # and/or close the stock.
             if not trick and not game.closed:
                 if player.human:
                     exchange, close = player.choose_action_human(
@@ -62,8 +62,8 @@ def game_loop(game, players):
                         game.trump_suit
                     )
 
-                # A player has chosen to exchange the trump Jack
-                # for the trump card.
+                # The active player has chosen to exchange the trump
+                # Jack for the trump card. The stock isn't closed yet.
                 if exchange and not game.closed:
                     trump_jack = player.pop_trump_jack(game.trump_suit)
                     if player.human:
@@ -73,23 +73,26 @@ def game_loop(game, players):
                         print(f"{game.trump_card['name']}.")
                     game.exchange_trump_jack(trump_jack)
 
-                # A player has chosen to close the stock.
+                # The active player has chosen to close the stock.
                 if close:
                     game.close_stock()
 
             sleep(SECONDS)
-            # Player chooses a card to play.
+            # The active player chooses a card to play.
             couples = player.get_couples()
 
+            # A human player chooses the first or the second card.
             if player.human:
                 chosen_card = player.choose_card_human(
                     couples, game.trump_suit, trick, game.closed
                 )
+            # A computer player chooses the first card.
             elif not player.human and not trick:
                 chosen_card = player.choose_card1_computer(
                     couples, game.trump_suit
                 )
-            else:
+            # A computer player chooses the second card.
+            elif not player.human and trick:
                 chosen_card = player.choose_card2_computer(
                     game.trump_suit, trick, game.closed
                 )
@@ -98,7 +101,9 @@ def game_loop(game, players):
             if player.points >= 66:
                 return
 
-            # Player has chosen a card to play.
+            # Display a message to show that the active player has
+            # chosen a card to play.
+            # Append that card to the current trick.
             card_tuple = (chosen_card, player.name)
             trick.append(card_tuple)
             if player.human:
@@ -174,7 +179,7 @@ def reset_attributes(players):
 
 
 def main():
-    """The main function."""
+    """Call methods to play the game."""
     print("SCHNAPSEN\n")
     players = create_players()
     while True:
@@ -182,6 +187,7 @@ def main():
         game_loop(game, players)
         results(players)
 
+        # Ask whether the player wants to start a new game.
         answer = ""
         while answer not in ("y", "n"):
             answer = input("\nStart a new game? (y/n) ").strip().lower()
