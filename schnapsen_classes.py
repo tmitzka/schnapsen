@@ -21,7 +21,7 @@ class SchnapsenPlayer():
         return f"{self.name} is a player of Schnapsen."
 
     def add_card(self, card):
-        """Add a card for the player's hand."""
+        """Add a card to the player's hand."""
         self.cards.append(card)
         if self.human:
             print(f"You have a new card: {card['name']}")
@@ -38,7 +38,7 @@ class SchnapsenPlayer():
         return {k: v for (k, v) in kings_queens.items() if len(v) == 2}
 
     def choose_card_human(self, couples, trump_suit, trick, closed):
-        """Let human player choose a card, and return it."""
+        """Let a human player choose a card, and return it."""
         # Sort cards to show them in order.
         self.cards.sort(
             key=lambda card: (card["suit"], card["points"]), reverse=True
@@ -46,7 +46,7 @@ class SchnapsenPlayer():
 
         # Show enumerated cards.
         print()
-        for counter, card in enumerate(self.cards, 1):
+        for number, card in enumerate(self.cards, 1):
             if card["suit"] == trump_suit:
                 print(f"{counter} - {card['name']}*")
             else:
@@ -68,7 +68,8 @@ class SchnapsenPlayer():
                 chosen_card = self.cards[index]
                 break
 
-            # Player chooses a card from the matching couples to play.
+            # The active player chooses a card from the matching
+            # couples to play.
             elif user_input.upper() == "M" and couples and not trick:
                 couple_cards = []
                 for suit in couples:
@@ -94,6 +95,7 @@ class SchnapsenPlayer():
             else:
                 print("Please choose one of the options above.")
 
+        # Remove the chosen card from the player's hand and return it.
         self.cards.remove(chosen_card)
         return chosen_card
 
@@ -113,6 +115,7 @@ class SchnapsenPlayer():
         else:
             chosen_card = self.cards[0]
 
+        # Remove the chosen card from the player's hand and return it.
         self.cards.remove(chosen_card)
         return chosen_card
 
@@ -158,6 +161,7 @@ class SchnapsenPlayer():
             no_trumps.sort(key=lambda d: d["points"])
             chosen_card = no_trumps[0]
 
+        # Remove the chosen card from the player's hand and return it.
         self.cards.remove(chosen_card)
         return chosen_card
 
@@ -166,10 +170,13 @@ class SchnapsenPlayer():
         for card_tuple in trick:
             card = card_tuple[0]
             self.points += card["points"]
+        # Add points from a previous marriage.
         if self.marriage_points:
             self.points += self.marriage_points
             self.marriage_points = 0
             print("Marriage points added.")
+
+        # Show the player's current points.
         if self.human:
             print("Your", end=" ")
         else:
@@ -177,9 +184,9 @@ class SchnapsenPlayer():
         print(f"points: {self.points} / 66")
 
     def choose_action_human(self, trump_suit, trump_card):
-        """Human player may choose an action.
+        """Let a human player choose an action.
 
-        The player can exchange the trump Jack and/or close the stock.
+        The player may exchange the trump Jack and/or close the stock.
         """
         exchange, close = False, False
         choices = ["Close the stock"]
@@ -216,7 +223,7 @@ class SchnapsenPlayer():
         return exchange, close
 
     def choose_action_computer(self, trump_suit):
-        """Computer player will exchange the trump card, if possible."""
+        """Exchange a computer player's trump card, if possible."""
         exchange, close = False, False
         for card in self.cards:
             if card["rank"] == "Jack" and card["suit"] == trump_suit:
@@ -246,7 +253,7 @@ class SchnapsenPlayer():
             print("Points will be added after the first taken trick.")
 
     def pop_trump_jack(self, trump_suit):
-        """Remove and return the trump Jack from the player's cards."""
+        """Remove the trump Jack from the player's cards. Return it."""
         for card in self.cards:
             if card["rank"] == "Jack" and card["suit"] == trump_suit:
                 trump_jack = card
