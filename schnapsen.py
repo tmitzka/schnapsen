@@ -1,7 +1,4 @@
-"""A game of Schnapsen.
-
-https://en.wikipedia.org/wiki/Sixty-six_(card_game)#Schnapsen
-"""
+"""Schnapsen is a text-based card game for two players."""
 
 from time import sleep
 
