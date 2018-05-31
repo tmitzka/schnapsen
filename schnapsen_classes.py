@@ -48,9 +48,9 @@ class SchnapsenPlayer():
         print()
         for number, card in enumerate(self.cards, 1):
             if card["suit"] == trump_suit:
-                print(f"{counter} - {card['name']}*")
+                print(f"{number} - {card['name']}*")
             else:
-                print(f"{counter} - {card['name']}")
+                print(f"{number} - {card['name']}")
         # Show the "marry" option.
         if couples and not trick:
             print("M - Marry a couple")
@@ -76,11 +76,11 @@ class SchnapsenPlayer():
                     couple_cards.extend(couples[suit])
 
                 print()
-                for counter, card in enumerate(couple_cards, 1):
+                for number, card in enumerate(couple_cards, 1):
                     if card["suit"] == trump_suit:
-                        print(f"{counter} - {card['name']}*")
+                        print(f"{number} - {card['name']}*")
                     else:
-                        print(f"{counter} - {card['name']}")
+                        print(f"{number} - {card['name']}")
                 user_input = ""
                 while (
                         not user_input.isdigit() or
@@ -201,8 +201,8 @@ class SchnapsenPlayer():
             if choices:
                 print("\nYou will play the first card.", end=" ")
                 print("Do you want to perform an action?\n")
-                for counter, choice in enumerate(choices, 1):
-                    print(f"{counter} - {choice}")
+                for number, choice in enumerate(choices, 1):
+                    print(f"{number} - {choice}")
                 prompt = "\nChoose an action or press Enter: "
                 user_input = input(prompt).strip()
             else:
