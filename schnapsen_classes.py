@@ -18,15 +18,15 @@ class SchnapsenPlayer():
         self.score = 0
 
     def __repr__(self):
-        return f"{self.name} is a player of Schnapsen."
+        return "{} is a player of Schnapsen.".format(self.name)
 
     def add_card(self, card):
         """Add a card to the player's hand."""
         self.cards.append(card)
         if self.human:
-            print(f"You have a new card: {card['name']}")
+            print("You have a new card: {}".format(card['name']))
         else:
-            print(f"{self.name} has a new card.")
+            print("{} has a new card.".format(self.name))
 
     def get_couples(self):
         """Return a dictionary of matching kings and queens."""
@@ -48,9 +48,9 @@ class SchnapsenPlayer():
         print()
         for number, card in enumerate(self.cards, 1):
             if card["suit"] == trump_suit:
-                print(f"{number} - {card['name']}*")
+                print("{} - {}*".format(number, card['name']))
             else:
-                print(f"{number} - {card['name']}")
+                print("{} - {}".format(number, card['name']))
         # Show the "marry" option.
         if couples and not trick:
             print("M - Marry a couple")
@@ -78,9 +78,9 @@ class SchnapsenPlayer():
                 print()
                 for number, card in enumerate(couple_cards, 1):
                     if card["suit"] == trump_suit:
-                        print(f"{number} - {card['name']}*")
+                        print("{} - {}*".format(number, card['name']))
                     else:
-                        print(f"{number} - {card['name']}")
+                        print("{} - {}".format(number, card['name']))
                 user_input = ""
                 while (
                         not user_input.isdigit() or
@@ -180,8 +180,8 @@ class SchnapsenPlayer():
         if self.human:
             print("Your", end=" ")
         else:
-            print(f"{self.name}'s", end=" ")
-        print(f"points: {self.points} / 66")
+            print("{}'s".format(self.name), end=" ")
+        print("points: {} / 66".format(self.points))
 
     def choose_action_human(self, trump_suit, trump_card):
         """Let a human player choose an action.
@@ -192,8 +192,10 @@ class SchnapsenPlayer():
         choices = ["Close the stock"]
         for card in self.cards:
             if card["rank"] == "Jack" and card["suit"] == trump_suit:
-                exchange_choice = f"Exchange your {card['name']} " \
-                f"for the {trump_card['name']}"
+                exchange_choice = "Exchange your {} for the {}".format(
+                    card['name'],
+                    trump_card['name'],
+                )
                 choices.append(exchange_choice)
                 break
 
@@ -202,7 +204,7 @@ class SchnapsenPlayer():
                 print("\nYou will play the first card.", end=" ")
                 print("Do you want to perform an action?\n")
                 for number, choice in enumerate(choices, 1):
-                    print(f"{number} - {choice}")
+                    print("{} - {}".format(number, choice))
                 prompt = "\nChoose an action or press Enter: "
                 user_input = input(prompt).strip()
             else:
@@ -243,8 +245,8 @@ class SchnapsenPlayer():
         if self.human:
             print("X You marry the couple of", end=" ")
         else:
-            print(f"X {self.name} marries the couple of", end=" ")
-        print(f"{card['suit']} ({points} points).")
+            print("X {} marries the couple of".format(self.name), end=" ")
+        print("{} ({} points).".format(card['suit'], points))
 
         if self.points:
             self.points += points
@@ -286,7 +288,7 @@ class SchnapsenGame():
 
         for suit in SUITS:
             for rank, points in ranks_points:
-                name = f"[{rank} of {suit}]"
+                name = "[{} of {}]".format(rank, suit)
                 card = {
                     "name": name,
                     "suit": suit,
@@ -301,7 +303,7 @@ class SchnapsenGame():
         self.trump_card = self.stock[0]
         self.trump_suit = self.trump_card["suit"]
         print("Cards are shuffled.", end=" ")
-        print(f"Trump card: {self.trump_card['name']}\n")
+        print("Trump card: {}\n".format(self.trump_card['name']))
 
     @staticmethod
     def decide_taker(trick, trump_suit):
@@ -355,7 +357,7 @@ class SchnapsenGame():
         """Exchange a trump Jack for the trump card."""
         self.stock[0] = trump_jack
         self.trump_card = trump_jack
-        print(f"New trump card: {self.trump_card['name']}")
+        print("New trump card: {}".format(self.trump_card['name']))
 
 
 if __name__ == "__main__":

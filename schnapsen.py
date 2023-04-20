@@ -16,8 +16,8 @@ def create_players():
     player1 = SchnapsenPlayer(PLAYER_NAMES[0], human=True)
     player2 = SchnapsenPlayer(PLAYER_NAMES[1])
     players = [player1, player2]
-    print(f"Welcome, {player1.name} and {player2.name}!", end=" ")
-    print(f"{player1.name}, you will begin.")
+    print("Welcome, {} and {}!".format(player1.name, player2.name), end=" ")
+    print("{}, you will begin.".format(player1.name))
     return players
 
 
@@ -64,10 +64,12 @@ def game_loop(game, players):
                 if exchange and not game.closed:
                     trump_jack = player.pop_trump_jack(game.trump_suit)
                     if player.human:
-                        print(f"\n< You take the {game.trump_card['name']}.")
+                        print("\n< You take the {}.".format(
+                                game.trump_card['name']
+                            ))
                     else:
-                        print(f"\n< {player.name} takes the", end=" ")
-                        print(f"{game.trump_card['name']}.")
+                        print("\n< {} takes the".format(player.name), end=" ")
+                        print("{}.".format(game.trump_card['name']))
                     game.exchange_trump_jack(trump_jack)
 
                 # The active player has chosen to close the stock.
@@ -104,10 +106,10 @@ def game_loop(game, players):
             card_tuple = (chosen_card, player.name)
             trick.append(card_tuple)
             if player.human:
-                print(f"> You play the {chosen_card['name']}.")
+                print("> You play the {}.".format(chosen_card['name']))
             else:
-                print(f"> {player.name} plays the", end=" ")
-                print(f"{chosen_card['name']}.")
+                print("> {} plays the".format(player.name), end=" ")
+                print("{}.".format(chosen_card['name']))
 
         sleep(SECONDS)
 
@@ -119,7 +121,7 @@ def game_loop(game, players):
                     if player.human:
                         print("\nYou take this trick.")
                     else:
-                        print(f"\n{player.name} takes this trick.")
+                        print("\n{} takes this trick.".format(player.name))
                     player.add_trick_points(trick)
 
             # If the second player has taken the trick, switch turns.
@@ -145,7 +147,7 @@ def results(players):
     if players[0].human:
         print("You WIN this round!")
     else:
-        print(f"{players[0].name} WINS this round!")
+        print("{} WINS this round!".format(players[0].name))
     input("Press Enter to see the results. ")
 
     if players[1].points == 0:
@@ -158,12 +160,12 @@ def results(players):
     print("\nPOINTS")
     player_points = sorted(players, key=lambda p: p.points, reverse=True)
     for player in player_points:
-        print(f"{player.name}: {player.points}")
+        print("{}: {}".format(player.name, player.points))
 
     print("\nTOTAL SCORE")
     player_score = sorted(players, key=lambda p: p.score, reverse=True)
     for player in player_score:
-        print(f"{player.name}: {player.score}")
+        print("{}: {}".format(player.name, player.score))
 
 
 def reset_attributes(players):
