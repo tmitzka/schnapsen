@@ -1,14 +1,18 @@
 """Schnapsen is a text-based card game for two players."""
 
 from time import sleep
+import gettext
 
 from schnapsen_classes import SchnapsenPlayer, SchnapsenGame
 
-
+# Set constants.
+LANGUAGE = "en"
 PLAYER_NAMES = ("Human", "Computer")
+SECONDS = 1.5 # Change this number to make the game run slower or faster.
 
-# Change this number to make the game run slower or faster.
-SECONDS = 1.5
+# Translate strings.
+translation = gettext.translation("schnapsen", "locales", [LANGUAGE])
+translation.install()
 
 
 def create_players():
