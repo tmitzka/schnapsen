@@ -199,32 +199,30 @@ class SchnapsenPlayer():
                     trump_card['name'],
                 )
                 choices.append(exchange_choice)
-                break
+        
+        print()
+        print(_("It's your turn."), end=" ")
+        print(_("Do you want to perform an action?"))
 
         while True:
-            if choices:
-                print()
-                print(_("It's your turn."), end=" ")
-                print(_("Do you want to perform an action?"))
-                print()
-                for number, choice in enumerate(choices, 1):
-                    print(f"{number} - {choice}")
-                prompt = _("Choose an action or press Enter: ")
-                print()
-                user_input = input(prompt).strip()
-            else:
+            print()
+            for number, choice in enumerate(choices, 1):
+                print(f"{number} - {choice}")
+            prompt = _("Choose an action or press Enter to continue: ")
+            print()
+            user_input = input(prompt).strip()
+
+            if user_input == "1":
+                close = True
+                break     
+            elif user_input == "2" and len(choices) > 1:
+                exchange = True
+                choices.pop()
+                print(_("Okay, do you want to perform another action?"))
+            elif user_input == "":
                 break
-            if user_input:
-                if user_input == "1":
-                    close = True
-                    break
-                elif user_input == "2" and len(choices) > 1:
-                    exchange = True
-                    choices.pop(1)
-                else:
-                    print(_("Choose an option or press Enter."))
             else:
-                break
+                continue
 
         return exchange, close
 
