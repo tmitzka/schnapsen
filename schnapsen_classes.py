@@ -30,7 +30,9 @@ class SchnapsenPlayer():
         """Return a dictionary of matching kings and queens."""
         kings_queens = defaultdict(list)
         for card in self.cards:
-            if card["rank"] in ("King", "Queen"):
+            # Check point values to make sure this method works with
+            # translations.
+            if card["points"] in (3, 4):
                 suit = card["suit"]
                 kings_queens[suit].append(card)
         return {k: v for (k, v) in kings_queens.items() if len(v) == 2}
@@ -51,7 +53,7 @@ class SchnapsenPlayer():
                 print(f"{number} - {card['name']}")
         # Show the "marry" option.
         if couples and not trick:
-            print(_("M - Marry a couple"))
+            print(_("M - Marriage"))
 
         while True:
             print()
@@ -70,7 +72,7 @@ class SchnapsenPlayer():
 
             # The active player chooses a card from the matching
             # couples to play.
-            elif user_input.upper() == "M" and couples and not trick:
+            elif user_input.upper() == _("M") and couples and not trick:
                 couple_cards = []
                 for suit in couples:
                     couple_cards.extend(couples[suit])
@@ -202,7 +204,7 @@ class SchnapsenPlayer():
                     trump_card['name'],
                 )
                 choices.append(exchange_choice)
-        
+
         print()
         print(_("It's your turn."), end=" ")
         print(_("Do you want to perform an action?"))
@@ -217,7 +219,7 @@ class SchnapsenPlayer():
 
             if user_input == "1":
                 close = True
-                break     
+                break
             elif user_input == "2" and len(choices) > 1:
                 exchange = True
                 choices.pop()
@@ -249,10 +251,14 @@ class SchnapsenPlayer():
         # at least one trick.
         print("X", end=" ")
         if self.human:
-            print(_("You marry the couple of"), end=" ")
+            print(_(
+                "You marry the couple of {}"
+            ).format(card['suit']), end=" ")
         else:
-            print(_("{} marries the couple of").format(self.name), end=" ")
-        print(_("{} ({} points).").format(card['suit'], points))
+            print(_(
+                "{computer} marries the couple of {suit}"
+            ).format(computer=self.name, suit=card['suit']), end=" ")
+        print(_("({} points).").format(points))
 
         if self.points:
             self.points += points
