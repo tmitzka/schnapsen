@@ -294,7 +294,7 @@ class SchnapsenGame():
         suits = (_("Clubs"), _("Diamonds"), _("Hearts"), _("Spades"))
         for suit in suits:
             for rank, points in ranks_points:
-                name = _("[{rank} of {suit}]").format(rank, suit)
+                name = _("[{rank} of {suit}]").format(rank=rank, suit=suit)
                 card = {
                     "name": name,
                     "suit": suit,
