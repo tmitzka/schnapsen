@@ -178,13 +178,13 @@ def results(players):
     print(_("POINTS"))
     player_points = sorted(players, key=lambda p: p.points, reverse=True)
     for player in player_points:
-        print("{}: {}".format(player.name, player.points))
+        print(f"{player.name}: {player.points}")
 
     print()
     print(_("TOTAL SCORE"))
     player_score = sorted(players, key=lambda p: p.score, reverse=True)
     for player in player_score:
-        print("{}: {}".format(player.name, player.score))
+        print(f"{player.name}: {player.score}")
 
 
 def reset_attributes(players):

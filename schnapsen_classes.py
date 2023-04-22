@@ -16,7 +16,7 @@ class SchnapsenPlayer():
         self.score = 0
 
     def __repr__(self):
-        return "{} is a player of Schnapsen.".format(self.name)
+        return f"{self.name} is a player of Schnapsen."
 
     def add_card(self, card):
         """Add a card to the player's hand."""
@@ -46,9 +46,9 @@ class SchnapsenPlayer():
         print()
         for number, card in enumerate(self.cards, 1):
             if card["suit"] == trump_suit:
-                print("{} - {}*".format(number, card['name']))
+                print(f"{number} - {card['name']}*")
             else:
-                print("{} - {}".format(number, card['name']))
+                print(f"{number} - {card['name']}")
         # Show the "marry" option.
         if couples and not trick:
             print(_("M - Marry a couple"))
@@ -78,9 +78,9 @@ class SchnapsenPlayer():
                 print()
                 for number, card in enumerate(couple_cards, 1):
                     if card["suit"] == trump_suit:
-                        print("{} - {}*".format(number, card['name']))
+                        print(f"{number} - {card['name']}*")
                     else:
-                        print("{} - {}".format(number, card['name']))
+                        print(f"{number} - {card['name']}")
                 user_input = ""
                 while (
                     not user_input.isdigit()
@@ -183,7 +183,7 @@ class SchnapsenPlayer():
             print(_("Your points:"), end=" ")
         else:
             print(_("{}'s points:").format(self.name), end=" ")
-        print("{} / 66".format(self.points))
+        print(f"{self.points} / 66")
 
     def choose_action_human(self, trump_suit, trump_card):
         """Let a human player choose an action.
@@ -208,7 +208,7 @@ class SchnapsenPlayer():
                 print(_("Do you want to perform an action?"))
                 print()
                 for number, choice in enumerate(choices, 1):
-                    print("{} - {}".format(number, choice))
+                    print(f"{number} - {choice}")
                 prompt = _("Choose an action or press Enter: ")
                 print()
                 user_input = input(prompt).strip()
