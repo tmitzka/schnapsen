@@ -3,3 +3,7 @@ __pycache__/
 
 # Translation files
 *.po
+
+# Config files for code analysis tools
+.pylintrc
+.flake8
