@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-04-22 17:59+0200\n"
+"POT-Creation-Date: 2023-04-22 19:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,143 +99,147 @@ msgstr ""
 msgid "{} draws a card."
 msgstr ""
 
-#: schnapsen_classes.py:54
-msgid "M - Marry a couple"
+#: schnapsen_classes.py:56
+msgid "M - Marriage"
 msgstr ""
 
-#: schnapsen_classes.py:59
+#: schnapsen_classes.py:61
 msgid "You have to match suit and take the trick if you can."
 msgstr ""
 
-#: schnapsen_classes.py:62
+#: schnapsen_classes.py:64
 msgid "Your choice: "
 msgstr ""
 
-#: schnapsen_classes.py:90
+#: schnapsen_classes.py:75
+msgid "M"
+msgstr ""
+
+#: schnapsen_classes.py:92
 msgid "Choose a card: "
 msgstr ""
 
-#: schnapsen_classes.py:98
+#: schnapsen_classes.py:100
 msgid "Choose one of the options above."
 msgstr ""
 
-#: schnapsen_classes.py:179
+#: schnapsen_classes.py:181
 msgid "Marriage points added."
 msgstr ""
 
-#: schnapsen_classes.py:183
+#: schnapsen_classes.py:185
 msgid "Your points:"
 msgstr ""
 
-#: schnapsen_classes.py:185
+#: schnapsen_classes.py:187
 msgid "{}'s points:"
 msgstr ""
 
-#: schnapsen_classes.py:194
+#: schnapsen_classes.py:196
 msgid "Close the stock"
 msgstr ""
 
-#: schnapsen_classes.py:197
+#: schnapsen_classes.py:202
 msgid "Exchange your {} for the {}"
 msgstr ""
 
-#: schnapsen_classes.py:204
+#: schnapsen_classes.py:209
 msgid "It's your turn."
 msgstr ""
 
-#: schnapsen_classes.py:205
+#: schnapsen_classes.py:210
 msgid "Do you want to perform an action?"
 msgstr ""
 
-#: schnapsen_classes.py:211
+#: schnapsen_classes.py:216
 msgid "Choose an action or press Enter to continue: "
 msgstr ""
 
-#: schnapsen_classes.py:221
+#: schnapsen_classes.py:226
 msgid "Okay, do you want to perform another action?"
 msgstr ""
 
-#: schnapsen_classes.py:249
-msgid "You marry the couple of"
-msgstr ""
-
-#: schnapsen_classes.py:251
-msgid "{} marries the couple of"
-msgstr ""
-
-#: schnapsen_classes.py:252
-msgid "{} ({} points)."
+#: schnapsen_classes.py:254
+msgid "You marry the couple of {}"
 msgstr ""
 
 #: schnapsen_classes.py:258
+msgid "{computer} marries the couple of {suit}"
+msgstr ""
+
+#: schnapsen_classes.py:261
+msgid "({} points)."
+msgstr ""
+
+#: schnapsen_classes.py:267
 msgid "Points will be added after the first trick taken."
 msgstr ""
 
-#: schnapsen_classes.py:285
+#: schnapsen_classes.py:296
 msgid "Jack"
 msgstr ""
 
-#: schnapsen_classes.py:286
+#: schnapsen_classes.py:297
 msgid "Queen"
 msgstr ""
 
-#: schnapsen_classes.py:287
+#: schnapsen_classes.py:298
 msgid "King"
 msgstr ""
 
-#: schnapsen_classes.py:288
+#: schnapsen_classes.py:299
 msgid "Ten"
 msgstr ""
 
-#: schnapsen_classes.py:289
+#: schnapsen_classes.py:300
 msgid "Ace"
 msgstr ""
 
-#: schnapsen_classes.py:292
+#: schnapsen_classes.py:303
 msgid "Clubs"
 msgstr ""
 
-#: schnapsen_classes.py:292
+#: schnapsen_classes.py:303
 msgid "Diamonds"
 msgstr ""
 
-#: schnapsen_classes.py:292
+#: schnapsen_classes.py:303
 msgid "Hearts"
 msgstr ""
 
-#: schnapsen_classes.py:292
+#: schnapsen_classes.py:303
 msgid "Spades"
 msgstr ""
 
-#: schnapsen_classes.py:295
+#: schnapsen_classes.py:306
 msgid "[{rank} of {suit}]"
 msgstr ""
 
-#: schnapsen_classes.py:309
+#: schnapsen_classes.py:320
 msgid "The cards are shuffled."
 msgstr ""
 
-#: schnapsen_classes.py:310
+#: schnapsen_classes.py:321
 msgid "Trump card: {}"
 msgstr ""
 
-#: schnapsen_classes.py:338
+#: schnapsen_classes.py:349
 msgid "There are only two more cards in the stock."
 msgstr ""
 
-#: schnapsen_classes.py:342
+#: schnapsen_classes.py:353
 msgid "The last card has been drawn!"
 msgstr ""
 
-#: schnapsen_classes.py:344 schnapsen_classes.py:355
+#: schnapsen_classes.py:355 schnapsen_classes.py:366
 msgid "Players must match suits and take tricks if they can."
 msgstr ""
 
-#: schnapsen_classes.py:354
+#: schnapsen_classes.py:365
 msgid "The stock is closed. Players can't draw any more cards."
 msgstr ""
 
-#: schnapsen_classes.py:361
+#: schnapsen_classes.py:372
 msgid "New trump card: {}"
 msgstr ""
 
