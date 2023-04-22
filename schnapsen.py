@@ -152,6 +152,7 @@ def game_loop(game, players):
 
 def results(players):
     """Declare the winner, raise score, and show results."""
+    print()
     if players[0].human:
         print(_("You WIN this round!"))
     else:
