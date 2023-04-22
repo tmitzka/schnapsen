@@ -1,0 +1,242 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2023-04-22 08:24+0200\n"
+"PO-Revision-Date: 2023-04-22 08:29+0200\n"
+"Last-Translator: Thomas Mitzka <tm@thomasmitzka.at>\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: pygettext.py 1.5\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: schnapsen.py:17
+msgid "Computer"
+msgstr "Computer"
+
+#: schnapsen.py:17
+msgid "Human"
+msgstr "Human"
+
+#: schnapsen.py:26
+msgid "Welcome, {} and {}!"
+msgstr "Welcome, {} and {}!"
+
+#: schnapsen.py:27
+msgid "{}, you will begin."
+msgstr "{}, you will begin."
+
+#: schnapsen.py:54
+msgid "We've run out of cards."
+msgstr "We've run out of cards."
+
+#: schnapsen.py:55
+msgid "The player who took the last trick wins."
+msgstr "The player who took the last trick wins."
+
+#: schnapsen.py:76
+msgid "You take the {}."
+msgstr "You take the {}."
+
+#: schnapsen.py:82
+msgid "{} takes the {}."
+msgstr "{} takes the {}."
+
+#: schnapsen.py:123
+msgid "You play the {}."
+msgstr "You play the {}."
+
+#: schnapsen.py:126
+msgid "{} plays the {}."
+msgstr "{} plays the {}."
+
+#: schnapsen.py:140
+msgid "You take this trick."
+msgstr "You take this trick."
+
+#: schnapsen.py:143
+msgid "{} takes this trick."
+msgstr "{} takes this trick."
+
+#: schnapsen.py:167
+msgid "You WIN this round!"
+msgstr "You WIN this round!"
+
+#: schnapsen.py:169
+msgid "{} WINS this round!"
+msgstr "{} WINS this round!"
+
+#: schnapsen.py:170
+msgid "Press Enter to see the results. "
+msgstr "Press Enter to see the results. "
+
+#: schnapsen.py:180
+msgid "POINTS"
+msgstr "POINTS"
+
+#: schnapsen.py:186
+msgid "TOTAL SCORE"
+msgstr "TOTAL SCORE"
+
+#: schnapsen.py:212
+msgid "n"
+msgstr "n"
+
+#: schnapsen.py:212 schnapsen.py:216
+msgid "y"
+msgstr "y"
+
+#: schnapsen.py:214
+msgid "Start a new game? (y/n) "
+msgstr "Start a new game? (y/n) "
+
+#: schnapsen.py:218
+msgid "Both players will keep their current score."
+msgstr "Both players will keep their current score."
+
+#: schnapsen_classes.py:25
+msgid "You have a new card: {}"
+msgstr "You have a new card: {}"
+
+#: schnapsen_classes.py:27
+msgid "{} has a new card."
+msgstr "{} has a new card."
+
+#: schnapsen_classes.py:54
+msgid "M - Marry a couple"
+msgstr "M - Marry a couple"
+
+#: schnapsen_classes.py:59
+msgid "You have to match suit and take the trick if you can."
+msgstr "You have to match suit and take the trick if you can."
+
+#: schnapsen_classes.py:90
+msgid "Choose a card: "
+msgstr "Choose a card: "
+
+#: schnapsen_classes.py:98
+msgid "Please choose one of the options above."
+msgstr "Please choose one of the options above."
+
+#: schnapsen_classes.py:179
+msgid "Marriage points added."
+msgstr "Marriage points added."
+
+#: schnapsen_classes.py:183
+msgid "Your points:"
+msgstr "Your points:"
+
+#: schnapsen_classes.py:185
+msgid "{}'s points:"
+msgstr "{}'s points:"
+
+#: schnapsen_classes.py:194
+msgid "Close the stock"
+msgstr "Close the stock"
+
+#: schnapsen_classes.py:197
+msgid "Exchange your {} for the {}"
+msgstr "Exchange your {} for the {}"
+
+#: schnapsen_classes.py:207
+msgid "You will play the first card."
+msgstr "You will play the first card."
+
+#: schnapsen_classes.py:208
+msgid "Do you want to perform an action?"
+msgstr "Do you want to perform an action?"
+
+#: schnapsen_classes.py:212
+msgid "Choose an action or press Enter: "
+msgstr "Choose an action or press Enter: "
+
+#: schnapsen_classes.py:225
+msgid "Choose one of the options above or press Enter."
+msgstr "Choose one of the options above or press Enter."
+
+#: schnapsen_classes.py:251
+msgid "You marry the couple of"
+msgstr "You marry the couple of"
+
+#: schnapsen_classes.py:253
+msgid "{} marries the couple of"
+msgstr "{} marries the couple of"
+
+#: schnapsen_classes.py:254
+msgid "{} ({} points)."
+msgstr "{} ({} points)."
+
+#: schnapsen_classes.py:260
+msgid "Points will be added after the first taken trick."
+msgstr "Points will be added after the first taken trick."
+
+#: schnapsen_classes.py:287
+msgid "Jack"
+msgstr "Jack"
+
+#: schnapsen_classes.py:288
+msgid "Queen"
+msgstr "Queen"
+
+#: schnapsen_classes.py:289
+msgid "King"
+msgstr "King"
+
+#: schnapsen_classes.py:290
+msgid "Ten"
+msgstr "Ten"
+
+#: schnapsen_classes.py:291
+msgid "Ace"
+msgstr "Ace"
+
+#: schnapsen_classes.py:294
+msgid "Clubs"
+msgstr "Clubs"
+
+#: schnapsen_classes.py:294
+msgid "Diamonds"
+msgstr "Diamonds"
+
+#: schnapsen_classes.py:294
+msgid "Hearts"
+msgstr "Hearts"
+
+#: schnapsen_classes.py:294
+msgid "Spades"
+msgstr "Spades"
+
+#: schnapsen_classes.py:311
+msgid "Cards are shuffled."
+msgstr "Cards are shuffled."
+
+#: schnapsen_classes.py:312
+msgid "Trump card: {}"
+msgstr "Trump card: {}"
+
+#: schnapsen_classes.py:340
+msgid "There are only two more cards in the stock."
+msgstr "There are only two more cards in the stock."
+
+#: schnapsen_classes.py:344
+msgid "The last card has been drawn!"
+msgstr "The last card has been drawn!"
+
+#: schnapsen_classes.py:345 schnapsen_classes.py:357
+msgid "Players must match suits and take tricks if they can."
+msgstr "Players must match suits and take tricks if they can."
+
+#: schnapsen_classes.py:356
+msgid "The stock is closed. Players cannot draw cards anymore."
+msgstr "The stock is closed. Players cannot draw cards anymore."
+
+#: schnapsen_classes.py:363
+msgid "New trump card: {}"
+msgstr "New trump card: {}"
