@@ -7,7 +7,7 @@ from schnapsen_classes import SchnapsenPlayer, SchnapsenGame
 
 
 # Set language.
-LANGUAGE = "de"
+LANGUAGE = "en"
 
 # Translate strings.
 translation = gettext.translation("schnapsen", "locales", [LANGUAGE])
