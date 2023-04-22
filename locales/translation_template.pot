@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-04-22 11:41+0200\n"
+"POT-Creation-Date: 2023-04-22 12:35+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgid "Computer"
 msgstr ""
 
 #: schnapsen.py:17
-msgid "Human"
+msgid "Player"
 msgstr ""
 
 #: schnapsen.py:26
@@ -100,11 +100,11 @@ msgid "Both players will keep their current score."
 msgstr ""
 
 #: schnapsen_classes.py:25
-msgid "You have a new card: {}"
+msgid "You draw a card: {}"
 msgstr ""
 
 #: schnapsen_classes.py:27
-msgid "{} has a new card."
+msgid "{} draws a card."
 msgstr ""
 
 #: schnapsen_classes.py:54
@@ -115,12 +115,16 @@ msgstr ""
 msgid "You have to match suit and take the trick if you can."
 msgstr ""
 
+#: schnapsen_classes.py:62
+msgid "Your choice: "
+msgstr ""
+
 #: schnapsen_classes.py:90
 msgid "Choose a card: "
 msgstr ""
 
 #: schnapsen_classes.py:98
-msgid "Please choose one of the options above."
+msgid "Choose one of the options above."
 msgstr ""
 
 #: schnapsen_classes.py:179
@@ -144,7 +148,7 @@ msgid "Exchange your {} for the {}"
 msgstr ""
 
 #: schnapsen_classes.py:207
-msgid "You will play the first card."
+msgid "It's your turn."
 msgstr ""
 
 #: schnapsen_classes.py:208
@@ -156,7 +160,7 @@ msgid "Choose an action or press Enter: "
 msgstr ""
 
 #: schnapsen_classes.py:225
-msgid "Choose one of the options above or press Enter."
+msgid "Choose an option or press Enter."
 msgstr ""
 
 #: schnapsen_classes.py:251
@@ -172,7 +176,7 @@ msgid "{} ({} points)."
 msgstr ""
 
 #: schnapsen_classes.py:260
-msgid "Points will be added after the first taken trick."
+msgid "Points will be added after the first trick taken."
 msgstr ""
 
 #: schnapsen_classes.py:287
@@ -216,7 +220,7 @@ msgid "[{rank} of {suit}]"
 msgstr ""
 
 #: schnapsen_classes.py:311
-msgid "Cards are shuffled."
+msgid "The cards are shuffled."
 msgstr ""
 
 #: schnapsen_classes.py:312
@@ -232,11 +236,11 @@ msgid "The last card has been drawn!"
 msgstr ""
 
 #: schnapsen_classes.py:345 schnapsen_classes.py:357
-msgid "Players must match suits and take tricks if they can."
+msgid "Both players must match suits and take tricks if they can."
 msgstr ""
 
 #: schnapsen_classes.py:356
-msgid "The stock is closed. Players cannot draw cards anymore."
+msgid "The stock is closed. Players can't draw any more cards."
 msgstr ""
 
 #: schnapsen_classes.py:363
