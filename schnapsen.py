@@ -71,13 +71,12 @@ def game_loop(game, players):
                 # Jack for the trump card. The stock isn't closed yet.
                 if exchange and not game.closed:
                     trump_jack = player.pop_trump_jack(game.trump_suit)
+                    print("\n<", end=" ")
                     if player.human:
-                        print("\n<", end=" ")
                         print(_("You take the {}.").format(
                             game.trump_card['name']
                         ))
                     else:
-                        print("\n<", end=" ")
                         print(_("{} takes the {}.").format(
                             player.name,
                             game.trump_card['name'],
