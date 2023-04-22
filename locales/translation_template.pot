@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-04-22 12:35+0200\n"
+"POT-Creation-Date: 2023-04-22 14:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,59 +43,59 @@ msgstr ""
 msgid "You take the {}."
 msgstr ""
 
-#: schnapsen.py:82
+#: schnapsen.py:80
 msgid "{} takes the {}."
 msgstr ""
 
-#: schnapsen.py:123
+#: schnapsen.py:121
 msgid "You play the {}."
 msgstr ""
 
-#: schnapsen.py:126
+#: schnapsen.py:124
 msgid "{} plays the {}."
 msgstr ""
 
-#: schnapsen.py:140
+#: schnapsen.py:138
 msgid "You take this trick."
 msgstr ""
 
-#: schnapsen.py:143
+#: schnapsen.py:141
 msgid "{} takes this trick."
 msgstr ""
 
-#: schnapsen.py:167
+#: schnapsen.py:165
 msgid "You WIN this round!"
 msgstr ""
 
-#: schnapsen.py:169
+#: schnapsen.py:167
 msgid "{} WINS this round!"
 msgstr ""
 
-#: schnapsen.py:170
+#: schnapsen.py:168
 msgid "Press Enter to see the results. "
 msgstr ""
 
-#: schnapsen.py:180
+#: schnapsen.py:178
 msgid "POINTS"
 msgstr ""
 
-#: schnapsen.py:186
+#: schnapsen.py:184
 msgid "TOTAL SCORE"
 msgstr ""
 
-#: schnapsen.py:212
+#: schnapsen.py:210
 msgid "n"
 msgstr ""
 
-#: schnapsen.py:212 schnapsen.py:216
+#: schnapsen.py:210 schnapsen.py:214
 msgid "y"
 msgstr ""
 
-#: schnapsen.py:214
+#: schnapsen.py:212
 msgid "Start a new game? (y/n) "
 msgstr ""
 
-#: schnapsen.py:218
+#: schnapsen.py:216
 msgid "Both players will keep their current score."
 msgstr ""
 
@@ -235,8 +235,8 @@ msgstr ""
 msgid "The last card has been drawn!"
 msgstr ""
 
-#: schnapsen_classes.py:345 schnapsen_classes.py:357
-msgid "Both players must match suits and take tricks if they can."
+#: schnapsen_classes.py:346 schnapsen_classes.py:357
+msgid "Players must match suits and take tricks if they can."
 msgstr ""
 
 #: schnapsen_classes.py:356
