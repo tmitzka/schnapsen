@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-04-22 08:24+0200\n"
+"POT-Creation-Date: 2023-04-22 11:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -209,6 +209,10 @@ msgstr ""
 
 #: schnapsen_classes.py:294
 msgid "Spades"
+msgstr ""
+
+#: schnapsen_classes.py:297
+msgid "[{rank} of {suit}]"
 msgstr ""
 
 #: schnapsen_classes.py:311
