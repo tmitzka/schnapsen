@@ -193,7 +193,10 @@ class SchnapsenPlayer():
         exchange, close = False, False
         choices = [_("Close the stock")]
         for card in self.cards:
-            if card["rank"] == "Jack" and card["suit"] == trump_suit:
+            # Look for the trump Jack in the player's cards.
+            # Check the card's point value to ensure this methods works
+            # with translations.
+            if card["points"] == 2 and card["suit"] == trump_suit:
                 exchange_choice = _("Exchange your {} for the {}").format(
                     card['name'],
                     trump_card['name'],
@@ -260,7 +263,9 @@ class SchnapsenPlayer():
     def pop_trump_jack(self, trump_suit):
         """Remove the trump Jack from the player's cards. Return it."""
         for card in self.cards:
-            if card["rank"] == "Jack" and card["suit"] == trump_suit:
+            # Check the card's point value to ensure this methods works
+            # with translations.
+            if card["points"] == 2 and card["suit"] == trump_suit:
                 trump_jack = card
                 break
         self.cards.remove(trump_jack)
