@@ -7,14 +7,14 @@ from schnapsen_classes import SchnapsenPlayer, SchnapsenGame
 
 
 # Set language.
-LANGUAGE = "en"
+LANGUAGE = "de"
 
 # Translate strings.
 translation = gettext.translation("schnapsen", "locales", [LANGUAGE])
 translation.install()
 
 # Set other constants.
-PLAYER_NAMES = (_("Human"), _("Computer"))
+PLAYER_NAMES = (_("Player"), _("Computer"))
 SECONDS = 1.5
 
 

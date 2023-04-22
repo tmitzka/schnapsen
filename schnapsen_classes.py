@@ -22,9 +22,9 @@ class SchnapsenPlayer():
         """Add a card to the player's hand."""
         self.cards.append(card)
         if self.human:
-            print(_("You have a new card: {}").format(card['name']))
+            print(_("You draw a card: {}").format(card['name']))
         else:
-            print(_("{} has a new card.").format(self.name))
+            print(_("{} draws a card.").format(self.name))
 
     def get_couples(self):
         """Return a dictionary of matching kings and queens."""
@@ -59,7 +59,7 @@ class SchnapsenPlayer():
                 print(_(
                     "You have to match suit and take the trick if you can."
                 ))
-            user_input = input("Your choice: ").strip()
+            user_input = input(_("Your choice: ")).strip()
             if (
                     user_input.isdigit() and
                     int(user_input) in range(1, len(self.cards)+1)
@@ -95,7 +95,7 @@ class SchnapsenPlayer():
                 break
 
             else:
-                print(_("Please choose one of the options above."))
+                print(_("Choose one of the options above."))
 
         # Remove the chosen card from the player's hand and return it.
         self.cards.remove(chosen_card)
@@ -204,7 +204,7 @@ class SchnapsenPlayer():
         while True:
             if choices:
                 print()
-                print(_("You will play the first card."), end=" ")
+                print(_("It's your turn."), end=" ")
                 print(_("Do you want to perform an action?"))
                 print()
                 for number, choice in enumerate(choices, 1):
@@ -222,7 +222,7 @@ class SchnapsenPlayer():
                     exchange = True
                     choices.pop(1)
                 else:
-                    print(_("Choose one of the options above or press Enter."))
+                    print(_("Choose an option or press Enter."))
             else:
                 break
 
@@ -257,7 +257,7 @@ class SchnapsenPlayer():
             self.points += points
         else:
             self.marriage_points += points
-            print(_("Points will be added after the first taken trick."))
+            print(_("Points will be added after the first trick taken."))
 
     def pop_trump_jack(self, trump_suit):
         """Remove the trump Jack from the player's cards. Return it."""
@@ -308,7 +308,7 @@ class SchnapsenGame():
         random.shuffle(self.stock)
         self.trump_card = self.stock[0]
         self.trump_suit = self.trump_card["suit"]
-        print(_("Cards are shuffled."), end=" ")
+        print(_("The cards are shuffled."), end=" ")
         print(_("Trump card: {}").format(self.trump_card['name']))
         print()
 
@@ -343,7 +343,7 @@ class SchnapsenGame():
                 print()
                 print(_("The last card has been drawn!"))
                 print(_(
-                    "Players must match suits and take tricks if they can."
+                    "Both players must match suits and take tricks if they can."
                 ))
                 self.closed = True
             return card
@@ -353,8 +353,8 @@ class SchnapsenGame():
     def close_stock(self):
         """Close the stock."""
         self.closed = True
-        print(_("The stock is closed. Players cannot draw cards anymore."))
-        print(_("Players must match suits and take tricks if they can."))
+        print(_("The stock is closed. Players can't draw any more cards."))
+        print(_("Both players must match suits and take tricks if they can."))
 
     def exchange_trump_jack(self, trump_jack):
         """Exchange a trump Jack for the trump card."""
