@@ -5,14 +5,17 @@ import gettext
 
 from schnapsen_classes import SchnapsenPlayer, SchnapsenGame
 
-# Set constants.
-LANGUAGE = "en"
-PLAYER_NAMES = ("Human", "Computer")
-SECONDS = 1.5 # Change this number to make the game run slower or faster.
+
+# Set language.
+LANGUAGE = "de"
 
 # Translate strings.
 translation = gettext.translation("schnapsen", "locales", [LANGUAGE])
 translation.install()
+
+# Set other constants.
+PLAYER_NAMES = (_("Human"), _("Computer"))
+SECONDS = 1.5
 
 
 def create_players():
@@ -20,8 +23,8 @@ def create_players():
     player1 = SchnapsenPlayer(PLAYER_NAMES[0], human=True)
     player2 = SchnapsenPlayer(PLAYER_NAMES[1])
     players = [player1, player2]
-    print("Welcome, {} and {}!".format(player1.name, player2.name), end=" ")
-    print("{}, you will begin.".format(player1.name))
+    print(_("Welcome, {} and {}!").format(player1.name, player2.name), end=" ")
+    print(_("{}, you will begin.").format(player1.name))
     return players
 
 
@@ -47,8 +50,9 @@ def game_loop(game, players):
 
             # Check whether the players have run out of cards.
             if not player.cards:
-                print("\nWe've run out of cards.")
-                print("The player who took the last trick wins.")
+                print()
+                print(_("We've run out of cards."))
+                print(_("The player who took the last trick wins."))
                 return
 
             # The first player may exchange the trump Jack
@@ -68,12 +72,17 @@ def game_loop(game, players):
                 if exchange and not game.closed:
                     trump_jack = player.pop_trump_jack(game.trump_suit)
                     if player.human:
-                        print("\n< You take the {}.".format(
+                        print("\n<", end=" ")
+                        print(_("You take the {}.").format(
                                 game.trump_card['name']
                             ))
                     else:
-                        print("\n< {} takes the".format(player.name), end=" ")
-                        print("{}.".format(game.trump_card['name']))
+                        print("\n<", end=" ")
+                        print(
+                            _("{} takes the {}.").format(
+                                player.name,
+                                game.trump_card['name'],
+                        ))
                     game.exchange_trump_jack(trump_jack)
 
                 # The active player has chosen to close the stock.
@@ -110,10 +119,14 @@ def game_loop(game, players):
             card_tuple = (chosen_card, player.name)
             trick.append(card_tuple)
             if player.human:
-                print("> You play the {}.".format(chosen_card['name']))
+                print(">", end=" ")
+                print(_("You play the {}.").format(chosen_card['name']))
             else:
-                print("> {} plays the".format(player.name), end=" ")
-                print("{}.".format(chosen_card['name']))
+                print(">", end=" ")
+                print(_("{} plays the {}.").format(
+                    player.name,
+                    chosen_card['name'],
+                ))
 
         sleep(SECONDS)
 
@@ -123,9 +136,11 @@ def game_loop(game, players):
             for player in players:
                 if player.name == taker:
                     if player.human:
-                        print("\nYou take this trick.")
+                        print()
+                        print(_("You take this trick."))
                     else:
-                        print("\n{} takes this trick.".format(player.name))
+                        print()
+                        print(_("{} takes this trick.").format(player.name))
                     player.add_trick_points(trick)
 
             # If the second player has taken the trick, switch turns.
@@ -149,10 +164,10 @@ def game_loop(game, players):
 def results(players):
     """Declare the winner, raise score, and show results."""
     if players[0].human:
-        print("You WIN this round!")
+        print(_("You WIN this round!"))
     else:
-        print("{} WINS this round!".format(players[0].name))
-    input("Press Enter to see the results. ")
+        print(_("{} WINS this round!").format(players[0].name))
+    input(_("Press Enter to see the results. "))
 
     if players[1].points == 0:
         players[0].score += 3
@@ -161,12 +176,14 @@ def results(players):
     else:
         players[0].score += 1
 
-    print("\nPOINTS")
+    print()
+    print(_("POINTS"))
     player_points = sorted(players, key=lambda p: p.points, reverse=True)
     for player in player_points:
         print("{}: {}".format(player.name, player.points))
 
-    print("\nTOTAL SCORE")
+    print()
+    print(_("TOTAL SCORE"))
     player_score = sorted(players, key=lambda p: p.score, reverse=True)
     for player in player_score:
         print("{}: {}".format(player.name, player.score))
@@ -192,11 +209,13 @@ def main():
 
         # Ask whether the player wants to start a new game.
         answer = ""
-        while answer not in ("y", "n"):
-            answer = input("\nStart a new game? (y/n) ").strip().lower()
-        if answer == "y":
+        while answer not in (_("y"), _("n")):
+            print()
+            prompt = _("Start a new game? (y/n) ")
+            answer = input(prompt).strip().lower()
+        if answer == _("y"):
             players = reset_attributes(players)
-            print("Both players will keep their current score.")
+            print(_("Both players will keep their current score."))
         else:
             break
 
