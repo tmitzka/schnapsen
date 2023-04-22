@@ -2,8 +2,8 @@
 Schnapsen is a text-based card game for two players.
 
 ## Rules
-For now, please refer to this [description on
-  Wikipedia](https://en.wikipedia.org/wiki/Sixty-six_(card_game)#Schnapsen).
+You can find the rules of Schnapsen [on
+Wikipedia](https://en.wikipedia.org/wiki/Schnapsen#Rules).
 
 ## Translations
 To play the game in German, change the variable LANGUAGE in *schnapsen.py* to
