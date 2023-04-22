@@ -74,14 +74,13 @@ def game_loop(game, players):
                     if player.human:
                         print("\n<", end=" ")
                         print(_("You take the {}.").format(
-                                game.trump_card['name']
-                            ))
+                            game.trump_card['name']
+                        ))
                     else:
                         print("\n<", end=" ")
-                        print(
-                            _("{} takes the {}.").format(
-                                player.name,
-                                game.trump_card['name'],
+                        print(_("{} takes the {}.").format(
+                            player.name,
+                            game.trump_card['name'],
                         ))
                     game.exchange_trump_jack(trump_jack)
 

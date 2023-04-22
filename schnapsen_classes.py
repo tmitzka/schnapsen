@@ -61,8 +61,8 @@ class SchnapsenPlayer():
                 ))
             user_input = input(_("Your choice: ")).strip()
             if (
-                    user_input.isdigit() and
-                    int(user_input) in range(1, len(self.cards)+1)
+                user_input.isdigit()
+                and int(user_input) in range(1, len(self.cards) + 1)
             ):
                 index = int(user_input) - 1
                 chosen_card = self.cards[index]
@@ -83,8 +83,8 @@ class SchnapsenPlayer():
                         print("{} - {}".format(number, card['name']))
                 user_input = ""
                 while (
-                        not user_input.isdigit() or
-                        int(user_input) not in range(1, len(couple_cards)+1)
+                    not user_input.isdigit()
+                    or int(user_input) not in range(1, len(couple_cards) + 1)
                 ):
                     print()
                     prompt = _("Choose a card: ")
@@ -130,19 +130,19 @@ class SchnapsenPlayer():
 
         for card in self.cards:
             if (
-                    card["suit"] == opponent_card["suit"] and
-                    card["points"] > opponent_card["points"]
-                ):
+                    card["suit"] == opponent_card["suit"]
+                    and card["points"] > opponent_card["points"]
+            ):
                 higher_suit_cards.append(card)
             elif (
-                    card["suit"] == opponent_card["suit"] and
-                    card["points"] < opponent_card["points"]
-                ):
+                    card["suit"] == opponent_card["suit"]
+                    and card["points"] < opponent_card["points"]
+            ):
                 lower_suit_cards.append(card)
             elif (
-                    card["suit"] == trump_suit and
-                    opponent_card["suit"] != trump_suit
-                ):
+                    card["suit"] == trump_suit
+                    and opponent_card["suit"] != trump_suit
+            ):
                 trump_cards.append(card)
 
         # Never choose a card with a higher value than required.
@@ -342,9 +342,9 @@ class SchnapsenGame():
             elif not self.stock:
                 print()
                 print(_("The last card has been drawn!"))
-                print(_(
-                    "Both players must match suits and take tricks if they can."
-                ))
+                print(
+                    _("Players must match suits and take tricks if they can.")
+                )
                 self.closed = True
             return card
         else:
@@ -354,7 +354,7 @@ class SchnapsenGame():
         """Close the stock."""
         self.closed = True
         print(_("The stock is closed. Players can't draw any more cards."))
-        print(_("Both players must match suits and take tricks if they can."))
+        print(_("Players must match suits and take tricks if they can."))
 
     def exchange_trump_jack(self, trump_jack):
         """Exchange a trump Jack for the trump card."""
