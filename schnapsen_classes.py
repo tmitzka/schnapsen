@@ -300,10 +300,19 @@ class SchnapsenGame():
             (_("Ace"), 11)
         )
 
-        suits = (_("Clubs"), _("Diamonds"), _("Hearts"), _("Spades"))
-        for suit in suits:
+        suits = (
+            (_("Clubs"), "♣️"),
+            (_("Diamonds"), "♦️"),
+            (_("Hearts"), "♥️"),
+            (_("Spades"), "♠️"),
+        )
+        for suit, suit_emoji in suits:
             for rank, points in ranks_points:
-                name = _("[{rank} of {suit}]").format(rank=rank, suit=suit)
+                name = _("[{suit_emoji} {rank} of {suit}]").format(
+                    suit_emoji=suit_emoji,
+                    rank=rank,
+                    suit=suit,
+                )
                 card = {
                     "name": name,
                     "suit": suit,
