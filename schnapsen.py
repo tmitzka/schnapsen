@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Schnapsen is a text-based card game for two players."""
 
 from time import sleep
