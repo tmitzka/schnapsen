@@ -15,7 +15,7 @@ translation.install()
 
 # Set other constants.
 PLAYER_NAMES = (_("Player"), _("Computer"))
-SECONDS = 1.5
+SECONDS = 1.2
 
 
 def create_players():
