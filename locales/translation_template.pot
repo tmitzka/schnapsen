@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-04-22 19:11+0200\n"
+"POT-Creation-Date: 2023-04-23 08:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -136,7 +136,7 @@ msgid "{}'s points:"
 msgstr ""
 
 #: schnapsen_classes.py:196
-msgid "Close the stock"
+msgid "Close the talon"
 msgstr ""
 
 #: schnapsen_classes.py:202
@@ -224,7 +224,7 @@ msgid "Trump card: {}"
 msgstr ""
 
 #: schnapsen_classes.py:349
-msgid "There are only two more cards in the stock."
+msgid "There are only two more cards in the talon."
 msgstr ""
 
 #: schnapsen_classes.py:353
@@ -236,7 +236,7 @@ msgid "Players must match suits and take tricks if they can."
 msgstr ""
 
 #: schnapsen_classes.py:365
-msgid "The stock is closed. Players can't draw any more cards."
+msgid "The talon is closed. Players can't draw any more cards."
 msgstr ""
 
 #: schnapsen_classes.py:372

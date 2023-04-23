@@ -151,7 +151,7 @@ class SchnapsenPlayer():
         if higher_suit_cards:
             higher_suit_cards.sort(key=lambda d: d["points"])
             chosen_card = higher_suit_cards[0]
-        # If the stock is closed, you have to match the suit.
+        # If the talon is closed, you have to match the suit.
         elif closed and lower_suit_cards:
             lower_suit_cards.sort(key=lambda d: d["points"])
             chosen_card = lower_suit_cards[0]
@@ -190,10 +190,10 @@ class SchnapsenPlayer():
     def choose_action_human(self, trump_suit, trump_card):
         """Let a human player choose an action.
 
-        The player may exchange the trump Jack and/or close the stock.
+        The player may exchange the trump Jack and/or close the talon.
         """
         exchange, close = False, False
-        choices = [_("Close the stock")]
+        choices = [_("Close the talon")]
         for card in self.cards:
             # Look for the trump Jack in the player's cards.
             # Check the card's point value to ensure this methods works
@@ -341,12 +341,12 @@ class SchnapsenGame():
         return taker
 
     def draw_from_stock(self):
-        """Draw a new card from the stock."""
+        """Draw a new card from the talon."""
         if not self.closed:
             card = self.stock.pop()
             if len(self.stock) == 2:
                 print()
-                print(_("There are only two more cards in the stock."))
+                print(_("There are only two more cards in the talon."))
                 print()
             elif not self.stock:
                 print()
@@ -360,9 +360,9 @@ class SchnapsenGame():
             return None
 
     def close_stock(self):
-        """Close the stock."""
+        """Close the talon."""
         self.closed = True
-        print(_("The stock is closed. Players can't draw any more cards."))
+        print(_("The talon is closed. Players can't draw any more cards."))
         print(_("Players must match suits and take tricks if they can."))
 
     def exchange_trump_jack(self, trump_jack):

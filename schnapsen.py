@@ -56,7 +56,7 @@ def game_loop(game, players):
                 return
 
             # The first player may exchange the trump Jack
-            # and/or close the stock.
+            # and/or close the talon.
             if not trick and not game.closed:
                 if player.human:
                     exchange, close = player.choose_action_human(
@@ -68,13 +68,13 @@ def game_loop(game, players):
                     )
 
                 # The active player has chosen to exchange the trump
-                # Jack for the trump card. The stock isn't closed yet.
+                # Jack for the trump card. The talon isn't closed yet.
                 if exchange and not game.closed:
                     trump_jack = player.pop_trump_jack(game.trump_suit)
                     player.add_card(game.trump_card)
                     game.exchange_trump_jack(trump_jack)
 
-                # The active player has chosen to close the stock.
+                # The active player has chosen to close the talon.
                 if close:
                     game.close_stock()
 
