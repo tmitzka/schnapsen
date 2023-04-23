@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-04-23 08:38+0200\n"
+"POT-Creation-Date: 2023-04-23 18:47+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,79 +15,79 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: schnapsen.py:17
+#: schnapsen.py:18
 msgid "Computer"
 msgstr ""
 
-#: schnapsen.py:17
+#: schnapsen.py:18
 msgid "Player"
 msgstr ""
 
-#: schnapsen.py:26
+#: schnapsen.py:27
 msgid "Welcome, {} and {}!"
 msgstr ""
 
-#: schnapsen.py:27
+#: schnapsen.py:28
 msgid "{}, you will begin."
 msgstr ""
 
-#: schnapsen.py:54
+#: schnapsen.py:55
 msgid "We've run out of cards."
 msgstr ""
 
-#: schnapsen.py:55
+#: schnapsen.py:56
 msgid "The player who took the last trick wins."
 msgstr ""
 
-#: schnapsen.py:112
+#: schnapsen.py:113
 msgid "You play the {}."
 msgstr ""
 
-#: schnapsen.py:115
+#: schnapsen.py:116
 msgid "{} plays the {}."
 msgstr ""
 
-#: schnapsen.py:129
+#: schnapsen.py:130
 msgid "You take this trick."
 msgstr ""
 
-#: schnapsen.py:132
+#: schnapsen.py:133
 msgid "{} takes this trick."
 msgstr ""
 
-#: schnapsen.py:157
+#: schnapsen.py:158
 msgid "You WIN this round!"
 msgstr ""
 
-#: schnapsen.py:159
+#: schnapsen.py:160
 msgid "{} WINS this round!"
 msgstr ""
 
-#: schnapsen.py:160
+#: schnapsen.py:161
 msgid "Press Enter to see the results. "
 msgstr ""
 
-#: schnapsen.py:170
+#: schnapsen.py:171
 msgid "POINTS"
 msgstr ""
 
-#: schnapsen.py:176
+#: schnapsen.py:177
 msgid "TOTAL SCORE"
 msgstr ""
 
-#: schnapsen.py:202
+#: schnapsen.py:203
 msgid "n"
 msgstr ""
 
-#: schnapsen.py:202 schnapsen.py:206
+#: schnapsen.py:203 schnapsen.py:207
 msgid "y"
 msgstr ""
 
-#: schnapsen.py:204
+#: schnapsen.py:205
 msgid "Start a new game? (y/n) "
 msgstr ""
 
-#: schnapsen.py:208
+#: schnapsen.py:209
 msgid "Both players will keep their current score."
 msgstr ""
 
@@ -195,51 +195,51 @@ msgstr ""
 msgid "Ace"
 msgstr ""
 
-#: schnapsen_classes.py:303
+#: schnapsen_classes.py:304
 msgid "Clubs"
 msgstr ""
 
-#: schnapsen_classes.py:303
+#: schnapsen_classes.py:305
 msgid "Diamonds"
 msgstr ""
 
-#: schnapsen_classes.py:303
+#: schnapsen_classes.py:306
 msgid "Hearts"
 msgstr ""
 
-#: schnapsen_classes.py:303
+#: schnapsen_classes.py:307
 msgid "Spades"
 msgstr ""
 
-#: schnapsen_classes.py:306
-msgid "[{rank} of {suit}]"
+#: schnapsen_classes.py:311
+msgid "[{suit_emoji} {rank} of {suit}]"
 msgstr ""
 
-#: schnapsen_classes.py:320
+#: schnapsen_classes.py:329
 msgid "The cards are shuffled."
 msgstr ""
 
-#: schnapsen_classes.py:321
+#: schnapsen_classes.py:330
 msgid "Trump card: {}"
 msgstr ""
 
-#: schnapsen_classes.py:349
+#: schnapsen_classes.py:358
 msgid "There are only two more cards in the talon."
 msgstr ""
 
-#: schnapsen_classes.py:353
+#: schnapsen_classes.py:362
 msgid "The last card has been drawn!"
 msgstr ""
 
-#: schnapsen_classes.py:355 schnapsen_classes.py:366
+#: schnapsen_classes.py:364 schnapsen_classes.py:375
 msgid "Players must match suits and take tricks if they can."
 msgstr ""
 
-#: schnapsen_classes.py:365
+#: schnapsen_classes.py:374
 msgid "The talon is closed. Players can't draw any more cards."
 msgstr ""
 
-#: schnapsen_classes.py:372
+#: schnapsen_classes.py:381
 msgid "New trump card: {}"
 msgstr ""
 
