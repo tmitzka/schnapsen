@@ -1,0 +1,5 @@
+[lint]
+# Ignore undefined names (`F821`).
+# The underscore used as an alias for gettext is misinterpreted as an undefined name.
+# Example: print(_("You WIN this round!"))
+ignore = ["F821"]
