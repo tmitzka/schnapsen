@@ -1,6 +1,6 @@
 __pycache__/
 *.swp
-cheat_sheet.txt
+*.sh
 
 # Translation files
 *.po
