@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2023-04-23 18:47+0200\n"
+"POT-Creation-Date: 2024-06-13 13:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -240,6 +240,10 @@ msgid "The talon is closed. Players can't draw any more cards."
 msgstr ""
 
 #: schnapsen_classes.py:381
+msgid "The trump Jack was replaced."
+msgstr ""
+
+#: schnapsen_classes.py:382
 msgid "New trump card: {}"
 msgstr ""
 
