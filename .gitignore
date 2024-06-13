@@ -8,3 +8,4 @@ cheat_sheet.txt
 # Config files for code analysis tools
 .pylintrc
 .flake8
+.ruff.toml
