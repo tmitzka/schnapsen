@@ -378,6 +378,7 @@ class SchnapsenGame():
         """Exchange a trump Jack for the trump card."""
         self.stock[0] = trump_jack
         self.trump_card = trump_jack
+        print(_("The trump Jack was replaced."))
         print(_("New trump card: {}").format(self.trump_card['name']))
 
 
